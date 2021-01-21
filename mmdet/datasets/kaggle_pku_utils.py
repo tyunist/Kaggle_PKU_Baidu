@@ -26,6 +26,7 @@ def euler_angles_to_quaternions(angle):
     """
     Convert euler angels to quaternions representation.
     该公式适用的yaw, pitch, roll与label里的定义不一样，需要做相应的变换 yaw, pitch, roll => pitch, yaw, roll
+    Ty: possibly convert euler angles with rotation in a fixed frame to equivalent euler angles with rotation in the moving frame.
 
     Input:
         angle: n x 3 matrix, each row is [yaw, pitch, roll]

@@ -309,14 +309,16 @@ test_pipeline = [
         ])
 ]
 
-# data_root = '/data/Kaggle/pku-autonomous-driving/'
-data_root = '/data/Kaggle/ApolloScape_3D_car/train/'
+#data_root = '/data/Kaggle/pku-autonomous-driving/'
+data_root = '/raid0/docker-raid/tynguyen/6Dof_estimation/data/pku-autonomous-driving'
+#data_root = '/data/Kaggle/ApolloScape_3D_car/train/'
 data = dict(
     imgs_per_gpu=1,
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
         data_root=data_root,
+        #ann_file='/data/cyh/kaggle/kaggle_apollo_combine_6692.json',
         #ann_file='/data/cyh/kaggle/kaggle_apollo_combine_6692.json',
         # ann_file=data_root + 'apollo_kaggle_combined_6725_wudi.json',
         ann_file='/data/Kaggle/kaggle_apollo_combined_6691_origin.json',  # 6691 means the final cleaned data
